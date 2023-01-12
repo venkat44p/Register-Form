@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="0dp"
+                    android:layout_height="170dp"
+                    android:src="@drawable/top_background_orange"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    tools:ignore="MissingConstraints">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="20dp"
+                    android:elevation="50dp"
+                    android:background="@drawable/custom_edittext"
+                    app:layout_constraintTop_toTopOf="@id/imageView1">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="24dp">
+
+                        <TextView
+                            android:id="@+id/createAccount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Register"
+                            android:textAlignment="center"
+                            android:textColor="@color/orange"
+                            android:textSize="36sp"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Name"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="30dp"
+                            app:hintTextColor="#ff9800"
+                            app:boxStrokeColor="#ff9800"
+                            app:boxStrokeWidth="1dp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/username_edit_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textPersonName"
+                                android:ems="10"
+                                android:textSize="15sp"
+                                android:textColorHint="@color/black" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Mobile Number"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            app:hintTextColor="#ff9800"
+                            app:boxStrokeColor="#ff9800"
+                            app:boxStrokeWidth="1dp"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/phone_edit_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="phone"
+                                android:ems="10"
+                                android:textSize="13sp"
+                                android:textColor="@color/black"
+                                android:textStyle="normal"/>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/border">
+
+                            <TextView
+                                android:id="@+id/genderET"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:hint="Gender : "
+                                android:textSize="18sp"
+                                android:textColorHint="@color/black"
+                                android:textStyle="normal"/>
+
+                            <Button
+                                android:id="@+id/maleBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:text="Male"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                app:cornerRadius="5dp"/>
+
+                            <Button
+                                android:id="@+id/femaleBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:text="Female"
+                                android:layout_weight="1"
+                                android:textSize="12sp"
+                                app:cornerRadius="5dp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center">
+                                <TextView
+                                    android:id="@+id/txtReturn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Age"
+                                    android:paddingLeft="6dp"
+                                    android:textSize="14dp"
+                                    android:textColorHint="@color/black"/>
+                                <RelativeLayout
+                                    android:layout_width="50dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true">
+                                    <ImageView
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:layout_gravity="center"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginRight="8dp"
+                                        android:src="@drawable/date" />
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/caste"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Caste"
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                                <RelativeLayout
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true">
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_gravity="center"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginRight="8dp"
+                                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/subCaste"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Sub Caste"
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                                <RelativeLayout
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true">
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_gravity="center"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginRight="8dp"
+                                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/education"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Education"
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                                <RelativeLayout
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true">
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_gravity="center"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginRight="8dp"
+                                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/employment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Employment"
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                                <RelativeLayout
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true">
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_gravity="center"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginRight="8dp"
+                                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/epicNum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Epic No"
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/serialNum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Serial No"
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/partNum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Part No"
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/boothName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Booth Name"
+                                    android:text=""
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                                <RelativeLayout
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true">
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_gravity="center"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginRight="8dp"
+                                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/wardName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Ward Name"
+                                    android:text=""
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                                <RelativeLayout
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true">
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_gravity="center"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginRight="8dp"
+                                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/constitution"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Constituentcy"
+                                    android:text=""
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                                <RelativeLayout
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true">
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_gravity="center"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginRight="8dp"
+                                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/villageCity"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Village/City"
+                                    android:text=""
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                                <RelativeLayout
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true">
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_gravity="center"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginRight="8dp"
+                                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/council"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Village Council"
+                                    android:text=""
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                                <RelativeLayout
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true">
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_gravity="center"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginRight="8dp"
+                                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/address"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Address"
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/postalNum"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Postal Number"
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/familyMembers"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Family Members"
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                                <RelativeLayout
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true">
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_gravity="center"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginRight="8dp"
+                                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/totalVotes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Total No of Votes"
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/party"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Affiliated Political Party"
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                                <RelativeLayout
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true">
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_gravity="center"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginRight="8dp"
+                                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginTop="18dp"
+                            android:orientation="vertical"
+                            android:background="@drawable/border">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_height="40dp">
+
+                                <TextView
+                                    android:id="@+id/schemes"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center|left"
+                                    android:hint="Schemes"
+                                    android:paddingLeft="6dp"
+                                    android:textColorHint="@color/black"
+                                    android:textSize="14dp" />
+                                <RelativeLayout
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerInParent="true">
+                                    <ImageView
+                                        android:layout_width="14dp"
+                                        android:layout_height="14dp"
+                                        android:layout_gravity="center"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginRight="8dp"
+                                        android:src="@drawable/ic_baseline_keyboard_arrow_down_24"/>
+
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/signUpButton"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginTop="40dp"
+                            android:backgroundTint="@color/orange"
+                            android:text="Register"
+                            android:textSize="18sp"
+                            app:cornerRadius="20dp"
+                            android:onClick="callSignUpScreen"/>
+                    </LinearLayout>
+                    </ScrollView>
+                </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
