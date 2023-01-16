@@ -11,7 +11,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            tools:ignore="MissingConstraints">
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -35,9 +38,10 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginBottom="15dp"
-                    tools:ignore="MissingConstraints">
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -63,9 +67,10 @@
                         android:padding="24dp">
 
                         <TextView
-                            android:id="@+id/createAccount"
+                            android:id="@+id/register"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:text="Register"
                             android:textAlignment="center"
                             android:textColor="@color/orange"
@@ -76,6 +81,7 @@
                             android:id="@+id/name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:hint="Name"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
@@ -91,7 +97,7 @@
                                 android:layout_height="wrap_content"
                                 android:inputType="textPersonName"
                                 android:ems="10"
-                                android:textSize="15sp"
+                                android:textSize="14sp"
                                 android:textColorHint="@color/black" />
 
                         </com.google.android.material.textfield.TextInputLayout>
@@ -100,6 +106,7 @@
                             android:id="@+id/phone"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:hint="Mobile Number"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
@@ -115,8 +122,8 @@
                                 android:layout_height="wrap_content"
                                 android:inputType="phone"
                                 android:ems="10"
-                                android:textSize="13sp"
-                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                android:textColorHint="@color/black"
                                 android:textStyle="normal"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
@@ -124,6 +131,7 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:layout_marginTop="18dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
@@ -133,19 +141,20 @@
                                 android:id="@+id/genderET"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
                                 android:layout_marginStart="5dp"
                                 android:layout_marginEnd="5dp"
                                 android:layout_marginLeft="5dp"
                                 android:layout_marginRight="5dp"
                                 android:hint="Gender : "
-                                android:textSize="18sp"
-                                android:textColorHint="@color/black"
+                                android:paddingStart="8dp"
                                 android:textStyle="normal"/>
 
                             <Button
                                 android:id="@+id/maleBtn"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
                                 android:layout_marginStart="5dp"
                                 android:layout_marginEnd="5dp"
                                 android:text="Male"
@@ -157,6 +166,7 @@
                                 android:id="@+id/femaleBtn"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
                                 android:layout_marginStart="5dp"
                                 android:layout_marginEnd="5dp"
                                 android:text="Female"
@@ -169,6 +179,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
+                            android:layout_gravity="center"
                             android:layout_marginTop="18dp"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
@@ -183,9 +194,7 @@
                                     android:layout_height="match_parent"
                                     android:gravity="center|left"
                                     android:hint="Age"
-                                    android:paddingLeft="6dp"
-                                    android:textSize="14dp"
-                                    android:textColorHint="@color/black"/>
+                                    android:paddingStart="8dp"/>
                                 <RelativeLayout
                                     android:layout_width="50dp"
                                     android:layout_height="match_parent"
@@ -207,6 +216,7 @@
                             android:id="@+id/caste"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:hint="Caste"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
@@ -220,7 +230,8 @@
                                 android:id="@+id/casteTv"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:inputType="none"/>
+                                android:inputType="none"
+                                android:ems="10" />
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -228,6 +239,7 @@
                             android:id="@+id/subCaste"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:hint="Sub Caste"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
@@ -249,6 +261,7 @@
                             android:id="@+id/education"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:hint="Education"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
@@ -262,7 +275,11 @@
                                 android:id="@+id/educationTv"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:inputType="none"/>
+                                android:inputType="none"
+                                android:ems="10"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:textStyle="normal"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -270,7 +287,8 @@
                             android:id="@+id/employment"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Education"
+                            android:layout_gravity="center"
+                            android:hint="Employment"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_marginTop="18dp"
@@ -283,7 +301,11 @@
                                 android:id="@+id/employmentTv"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:inputType="none"/>
+                                android:inputType="none"
+                                android:ems="10"
+                                android:textSize="14sp"
+                                android:textColorHint="@color/black"
+                                android:textStyle="normal"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
 
@@ -291,10 +313,11 @@
                             android:id="@+id/epicNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:hint="Epic No"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
-                            android:layout_marginTop="30dp"
+                            android:layout_marginTop="18dp"
                             app:hintTextColor="#ff9800"
                             app:boxStrokeColor="#ff9800"
                             app:boxStrokeWidth="1dp"
@@ -306,7 +329,7 @@
                                 android:layout_height="wrap_content"
                                 android:inputType="number"
                                 android:ems="10"
-                                android:textSize="15sp"
+                                android:textSize="14sp"
                                 android:textColorHint="@color/black" />
 
                         </com.google.android.material.textfield.TextInputLayout>
@@ -315,10 +338,11 @@
                             android:id="@+id/serialNum"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_gravity="center"
                             android:hint="Serial No"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
-                            android:layout_marginTop="30dp"
+                            android:layout_marginTop="18dp"
                             app:hintTextColor="#ff9800"
                             app:boxStrokeColor="#ff9800"
                             app:boxStrokeWidth="1dp"
@@ -330,7 +354,7 @@
                                 android:layout_height="wrap_content"
                                 android:inputType="none"
                                 android:ems="10"
-                                android:textSize="15sp"
+                                android:textSize="14sp"
                                 android:textColorHint="@color/black" />
 
                         </com.google.android.material.textfield.TextInputLayout>
@@ -342,7 +366,7 @@
                             android:hint="Part No"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
-                            android:layout_marginTop="30dp"
+                            android:layout_marginTop="18dp"
                             app:hintTextColor="#ff9800"
                             app:boxStrokeColor="#ff9800"
                             app:boxStrokeWidth="1dp"
@@ -354,7 +378,7 @@
                                 android:layout_height="wrap_content"
                                 android:inputType="textPersonName"
                                 android:ems="10"
-                                android:textSize="15sp"
+                                android:textSize="14sp"
                                 android:textColorHint="@color/black" />
 
                         </com.google.android.material.textfield.TextInputLayout>
@@ -540,7 +564,7 @@
                             android:hint="Total No of Votes"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
-                            android:layout_marginTop="30dp"
+                            android:layout_marginTop="18dp"
                             app:hintTextColor="#ff9800"
                             app:boxStrokeColor="#ff9800"
                             app:boxStrokeWidth="1dp"
@@ -582,7 +606,7 @@
                             android:id="@+id/schemes"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Affiliated Political Party"
+                            android:hint="Schemes"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
                             android:layout_marginTop="18dp"
