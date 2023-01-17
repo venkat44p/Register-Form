@@ -141,13 +141,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
-                                android:layout_marginStart="5dp"
-                                android:layout_marginEnd="5dp"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginRight="5dp"
                                 android:hint="Gender : "
                                 android:textColorHint="@color/black"
-                                android:paddingStart="8dp"
+                                android:paddingStart="16dp"
                                 android:textStyle="normal"/>
 
                             <Button
@@ -194,18 +190,20 @@
                                     android:layout_height="match_parent"
                                     android:gravity="center|left"
                                     android:hint="Age"
-                                    android:paddingStart="8dp"/>
+                                    android:textColorHint="@color/black"
+                                    android:paddingStart="16dp"/>
                                 <RelativeLayout
                                     android:layout_width="50dp"
                                     android:layout_height="match_parent"
                                     android:layout_alignParentRight="true"
                                     android:layout_centerInParent="true">
                                     <ImageView
+                                        android:id="@+id/date"
                                         android:layout_width="18dp"
                                         android:layout_height="18dp"
                                         android:layout_gravity="center"
                                         android:layout_centerInParent="true"
-                                        android:layout_marginRight="8dp"
+                                        android:layout_marginRight="6dp"
                                         android:src="@drawable/date" />
 
                                 </RelativeLayout>

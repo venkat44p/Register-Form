@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -20,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
     AutoCompleteTextView casteTv, subCasteTv, educationTv, employmentTv, boothNameTv, wardNameTv;
     AutoCompleteTextView constitutionTv, cityTv, councilTv, familyTv, politicalPartyTv, schemesTv;
+
+    ImageView date;
+    Button maleBtn, femaleBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
