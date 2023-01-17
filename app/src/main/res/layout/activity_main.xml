@@ -52,7 +52,6 @@
                     android:layout_marginBottom="20dp"
                     app:cardCornerRadius="20dp"
                     android:elevation="50dp"
-                    android:background="@drawable/custom_edittext"
                     app:layout_constraintTop_toTopOf="@id/imageView1">
 
                     <ScrollView
@@ -147,6 +146,7 @@
                                 android:layout_marginLeft="5dp"
                                 android:layout_marginRight="5dp"
                                 android:hint="Gender : "
+                                android:textColorHint="@color/black"
                                 android:paddingStart="8dp"
                                 android:textStyle="normal"/>
 

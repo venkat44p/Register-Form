@@ -10,9 +10,6 @@
 
     <color name="orange">#ff9800</color>
 
-    <color name="color_button_male_pressed">#ff9800</color>
-    <color name="color_button_male">#fff</color>
-    <color name="color_button_female">#fff</color>
 
 
 </resources>
