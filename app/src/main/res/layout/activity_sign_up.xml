@@ -1,0 +1,867 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="0dp"
+                android:layout_height="170dp"
+                android:src="@drawable/wavey_texture_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardCornerRadius="20dp"
+                    android:elevation="50dp"
+                    app:layout_constraintTop_toTopOf="@id/imageView1">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="24dp">
+
+                            <TextView
+                                android:id="@+id/register"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Register"
+                                android:textAlignment="center"
+                                android:textColor="@color/purple_700"
+                                android:textSize="36sp"
+                                android:textStyle="bold" />
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="30dp"
+                                android:background="@drawable/border"
+                                android:layout_gravity="center"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Voter Status : "
+                                    android:textColor="@color/black"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"/>
+
+                                <RadioGroup
+                                    android:id="@+id/voterStatus"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/radio_option_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Available"
+                                        android:layout_weight="1"/>
+
+                                    <RadioButton
+                                        android:id="@+id/radio_option_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Not Available"
+                                        android:layout_weight="1"/>
+
+                                    <RadioButton
+                                        android:id="@+id/radio_option_3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Out of Station"
+                                        android:layout_weight="1"/>
+
+                                </RadioGroup>
+
+                                <Switch
+                                    android:id="@+id/switch1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:text="Death" />
+
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:hint="Name"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="20dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/nameEt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:inputType="textPersonName"
+                                    android:ems="10"
+                                    android:textSize="14sp"
+                                    android:textColorHint="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:hint="Mobile Number"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/phoneEt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:inputType="phone"
+                                    android:ems="10"
+                                    android:textSize="14sp"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="normal"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/border">
+
+                                <TextView
+                                    android:id="@+id/genderET"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:hint="Gender : "
+                                    android:textColorHint="@color/black"
+                                    android:paddingStart="16dp"
+                                    android:textStyle="normal"/>
+
+                                <Button
+                                    android:id="@+id/maleBtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:text="Male"
+                                    android:layout_weight="1"
+                                    android:textSize="12sp"
+                                    app:cornerRadius="5dp"/>
+
+                                <Button
+                                    android:id="@+id/femaleBtn"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:text="Female"
+                                    android:layout_weight="1"
+                                    android:textSize="12sp"
+                                    app:cornerRadius="5dp"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:orientation="vertical"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:background="@drawable/border">
+                                <RelativeLayout
+                                    android:id="@+id/dob"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="40dp"
+                                    android:layout_gravity="center">
+                                    <TextView
+                                        android:id="@+id/age"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center|left"
+                                        android:hint="Age"
+                                        android:textColorHint="@color/black"
+                                        android:paddingStart="16dp"/>
+                                    <RelativeLayout
+                                        android:layout_width="50dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerInParent="true">
+                                        <ImageView
+                                            android:id="@+id/date"
+                                            android:layout_width="18dp"
+                                            android:layout_height="18dp"
+                                            android:layout_gravity="center"
+                                            android:layout_centerInParent="true"
+                                            android:layout_marginRight="6dp"
+                                            android:src="@drawable/date" />
+
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/border"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                                <Spinner
+                                    android:id="@+id/casteselector"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:autofillHints=""
+                                    android:imeOptions="actionNext"
+                                    android:singleLine="true" />
+
+                            </LinearLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/subCaste"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:hint="Sub Caste"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/subCasteTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/education"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:hint="Education"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/educationTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none"
+                                    android:ems="10"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="normal"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Scholarship Required : "
+                                    android:textColor="@color/black"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"/>
+
+                                <RadioGroup
+                                    android:id="@+id/scholarship"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/radioYes"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Yes"
+                                        android:layout_weight="1"/>
+
+                                    <RadioButton
+                                        android:id="@+id/radioNo"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="No"
+                                        android:layout_weight="1"/>
+
+                                </RadioGroup>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/employment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:hint="Employment"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/employmentTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none"
+                                    android:ems="10"
+                                    android:textSize="14sp"
+                                    android:textColorHint="@color/black"
+                                    android:textStyle="normal"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/epicNum"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:hint="Epic No"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/epicNumEt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:inputType=""
+                                    android:ems="10"
+                                    android:maxLines="1"
+                                    android:textSize="14sp"
+                                    android:textColorHint="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/serialNum"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:hint="Serial No"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/serialNumEt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:inputType="none"
+                                    android:ems="10"
+                                    android:maxLines="1"
+                                    android:textSize="14sp"
+                                    android:textColorHint="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/partNum"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Part No"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/partNumEt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:inputType="textPersonName"
+                                    android:ems="10"
+                                    android:maxLines="1"
+                                    android:textSize="14sp"
+                                    android:textColorHint="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/boothName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Booth Name"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/boothNameTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/wardName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Ward Name"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/wardNameTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/constitution"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Constituency"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/constitutionTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/city"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Village/City"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/cityTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/council"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Council"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/councilTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Address"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/addressEt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:inputType="textPostalAddress"
+                                    android:ems="10"
+                                    android:textSize="15sp"
+                                    android:textColorHint="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/postalNum"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Postal Address"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/postalNumEt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:inputType="textPostalAddress"
+                                    android:ems="10"
+                                    android:textSize="15sp"
+                                    android:textColorHint="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="20dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/border"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Ration Status : "
+                                    android:textColor="@color/black"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="10dp"/>
+
+                                <RadioGroup
+                                    android:id="@+id/rationId"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5dp"
+                                    android:layout_marginEnd="5dp"
+                                    android:orientation="horizontal">
+
+                                    <RadioButton
+                                        android:id="@+id/status_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="APL"
+                                        android:layout_weight="1"/>
+
+                                    <RadioButton
+                                        android:id="@+id/status_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="BPL"
+                                        android:layout_weight="1"/>
+
+                                    <RadioButton
+                                        android:id="@+id/status_3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="Others"
+                                        android:layout_weight="1"/>
+
+                                </RadioGroup>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/family"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Family Members"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/familyTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/totalVotes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Total No of Votes"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/totalVotesEt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="60dp"
+                                    android:inputType=""
+                                    android:ems="10"
+                                    android:textSize="15sp"
+                                    android:textColorHint="@color/black" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/politicalParty"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Affiliated Political Party"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/politicalPartyTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/schemes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Schemes"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="18dp"
+                                app:hintTextColor="#ff9800"
+                                app:boxStrokeColor="#ff9800"
+                                app:boxStrokeWidth="1dp"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+                                <AutoCompleteTextView
+                                    android:id="@+id/schemesTv"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="none"/>
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="30dp"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/upload_photo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/photo" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:drawablePadding="5dp"
+                                        android:text="Upload Photo" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:layout_width="40dp"
+                                        android:layout_height="40dp"
+                                        android:src="@drawable/file" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:drawablePadding="5dp"
+                                        android:text="Upload Document" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <androidx.appcompat.widget.AppCompatButton
+                                android:id="@+id/register_btn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginBottom="20dp"
+                                android:text="Register"
+                                android:textColor="@color/white"
+                                style="?android:borderlessButtonStyle"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+                    </ScrollView>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

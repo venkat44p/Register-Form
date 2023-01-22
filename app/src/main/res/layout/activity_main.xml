@@ -76,6 +76,65 @@
                             android:textSize="36sp"
                             android:textStyle="bold" />
 
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="30dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/voterStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:hint="Voter Status : "
+                                android:textColorHint="@color/black"
+                                android:paddingStart="16dp"
+                                android:textStyle="normal"/>
+
+
+                                <RadioGroup
+                                    android:id="@+id/radioInfo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:paddingStart="5dp"
+                                    android:paddingEnd="5dp">
+
+                                    <RadioButton
+                                        android:id="@+id/available"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:checked="true"
+                                        android:text="Available"/>
+
+                                    <RadioButton
+                                        android:id="@+id/not_available"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:layout_gravity="center"
+                                        android:checked="false"
+                                        android:text="Not Available"/>
+
+                                    <RadioButton
+                                        android:id="@+id/outstation"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                        android:checked="false"
+                                        android:text="Out of Station"/>
+
+                                </RadioGroup>
+
+                        </LinearLayout>
+
                         <com.google.android.material.textfield.TextInputLayout
                             android:id="@+id/name"
                             android:layout_width="match_parent"
@@ -84,7 +143,7 @@
                             android:hint="Name"
                             android:layout_marginLeft="5dp"
                             android:layout_marginRight="5dp"
-                            android:layout_marginTop="30dp"
+                            android:layout_marginTop="20dp"
                             app:hintTextColor="#ff9800"
                             app:boxStrokeColor="#ff9800"
                             app:boxStrokeWidth="1dp"
